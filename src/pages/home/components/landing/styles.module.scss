@@ -1,0 +1,7 @@
+.container {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  min-height: var(--min-height);
+  width: 100%;
+}

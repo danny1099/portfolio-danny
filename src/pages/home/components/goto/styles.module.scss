@@ -1,0 +1,10 @@
+.wrapper {
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+  font-size: small;
+  gap: 10px;
+  text-decoration: underline dashed dimgray;
+  text-underline-offset: 8px;
+  width: fit-content;
+}

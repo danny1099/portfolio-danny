@@ -1,0 +1,14 @@
+.wrapper {
+  align-items: center;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  left: 0;
+  padding: 1rem 6rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}

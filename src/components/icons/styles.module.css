@@ -1,0 +1,10 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  fill: currentColor;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  pointer-events: none;
+  width: auto;
+}

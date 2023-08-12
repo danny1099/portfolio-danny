@@ -1,0 +1,5 @@
+export { Content } from './content'
+export { Title } from './title'
+export { Wrapper } from './wrapper'
+export { GotoMyWork } from './goto'
+export { Landing } from './landing'

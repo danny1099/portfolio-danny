@@ -1,0 +1,17 @@
+.wrapper {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  height: 100%;
+  width: 55%;
+
+  & img {
+    border-radius: var(--border-radius);
+    filter: brightness(110%);
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scaleX(-1);
+    width: 100%;
+  }
+}
