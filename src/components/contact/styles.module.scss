@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 200px;
+  justify-content: center;
+  padding: 0 1rem;
+  line-height: 1.3;
+
+  & h3 {
+    color: var(--color-primary);
+    font-size: small;
+    font-weight: 400;
+  }
+
+  & p {
+    color: dimgray;
+    font-size: 0.7rem;
+    font-weight: 100;
+  }
+}

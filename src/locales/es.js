@@ -18,6 +18,7 @@ export const ES = {
       about: 'Sobre Mi',
       services: 'Servicios'
     },
+    contact: 'Hablemos!',
     toggleLang: {
       en: 'Traduce al idioma inglés',
       es: 'Traduce al idioma español'

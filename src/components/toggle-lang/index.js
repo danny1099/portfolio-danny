@@ -1,54 +1,24 @@
-import { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
-import { DDNextUIItem } from '@/components/dropdown/styled-components'
 import { Icon, Dropdown, Flag } from '@/components'
+import { DDNextUIItem } from '@/components/dropdown/styled-components'
 import { useLocales } from '@/hooks'
 
-const menuItems = [
-  {
-    key: 'en',
-    name: 'EN',
-    icon: <Flag locale="en" />,
-    description: 'en'
-  },
-  {
-    key: 'es',
-    name: 'ES',
-    icon: <Flag locale="es" />,
-    description: 'es'
-  }
-]
-
 export const ToggleLang = () => {
-  const t = useLocales({ search: 'toggleLang', key: 'components' })
   const { push, pathname, asPath, locale } = useRouter()
-  const [selected, setSelected] = useState(new Set([locale]))
-
-  const value = useMemo(
-    () => Array.from(selected).join(', ').replaceAll('_', ' '),
-    [selected]
-  )
-
-  useEffect(() => {
-    if (value !== locale) handleChangeLocale()
-  }, [selected])
-
-  const handleChangeLocale = () => {
+  const t = useLocales({ search: 'toggleLang', key: 'components' })
+  
+  const handleChangeLocale = (value) => {
     push(pathname, asPath, { locale: value })
   }
 
   return (
     <Dropdown
       show={<Icon name="translate" size="18px" />}
-      selected={selected}
-      onChange={setSelected}
-      items={menuItems}
+      initialValue={locale}
+      onChange={handleChangeLocale}
     >
-      {({ key, name, icon, description }) => (
-        <DDNextUIItem key={key} icon={icon} description={t[description]}>
-          {name}
-        </DDNextUIItem>
-      )}
+      <DDNextUIItem key="en" icon={<Flag locale="en" />} description={t['en']}>EN</DDNextUIItem>
+      <DDNextUIItem key="es" icon={<Flag locale="es" />} description={t['es']}>ES</DDNextUIItem>
     </Dropdown>
   )
 }

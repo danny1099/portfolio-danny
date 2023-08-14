@@ -14,10 +14,11 @@ export const EN = {
   components: {
     navbar: {
       home: 'Home',
-      work: 'My Work',
-      about: 'About Me',
+      work: 'Work',
+      about: 'About',
       services: 'Services'
     },
+    contact: 'Get in touch!',
     toggleLang: {
       en: 'Translate into english language',
       es: 'Translate into spanish language'

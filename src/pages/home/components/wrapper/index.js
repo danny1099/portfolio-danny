@@ -8,11 +8,11 @@ export const Wrapper = styled.article`
   width: 45%;
 
   & span {
-    display: flex;
     color: var(--color-text-secondary);
+    display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 50px;
-    padding: 0 0.7rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
   }
 `

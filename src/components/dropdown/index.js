@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Dropdown as DDNextUI } from '@nextui-org/react'
 import { DDNextUIButton, DDNextUIMenu } from './styled-components'
 
-export function Dropdown({ show, selected, onChange, items, children }) {
-  const [mounted, setMounted] = useState(false)
+export function Dropdown({ show, onChange, initialValue = '', children }) {
+  const [selected, setSelected] = useState(new Set([initialValue]))
+
+  const value = useMemo(
+    () => Array.from(selected).join(', ').replaceAll('_', ' '),
+    [selected]
+  )
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
+    onChange(value)
+  }, [selected])
 
   return (
     <DDNextUI>
@@ -26,8 +27,8 @@ export function Dropdown({ show, selected, onChange, items, children }) {
         disallowEmptySelection
         selectionMode="single"
         selectedKeys={selected}
-        onSelectionChange={onChange}
-        items={items}
+        onSelectionChange={setSelected}
+        color="secondary"
       >
         {children}
       </DDNextUIMenu>
