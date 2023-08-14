@@ -14,9 +14,18 @@ export const EN = {
   components: {
     navbar: {
       home: 'Home',
-      work: 'Work',
-      about: 'About',
+      work: 'My Work',
+      about: 'About Me',
       services: 'Services'
+    },
+    toggleLang: {
+      en: 'Translate into english language',
+      es: 'Translate into spanish language'
+    },
+    toggleTheme: {
+      system: 'System',
+      light: 'Light',
+      dark: 'Dark'
     }
   }
 }

@@ -17,6 +17,15 @@ export const ES = {
       work: 'Mi Trabajo',
       about: 'Sobre Mi',
       services: 'Servicios'
+    },
+    toggleLang: {
+      en: 'Traduce al idioma inglés',
+      es: 'Traduce al idioma español'
+    },
+    toggleTheme: {
+      system: 'Sistema',
+      light: 'Claro',
+      dark: 'Oscuro'
     }
   }
 }

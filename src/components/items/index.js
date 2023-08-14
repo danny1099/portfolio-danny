@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { NavLink } from '@/components'
 import { useLocales } from '@/hooks'
 import { publicRoutes } from '@/routes'
 import styles from './styles.module.scss'
@@ -28,9 +28,9 @@ export const NavItems = () => {
     <nav className={styles.wrapper}>
       {navItems.map(({ id, path, name }) => {
         return (
-          <Link key={id} href={path}>
+          <NavLink key={id} href={path}>
             {t[name]}
-          </Link>
+          </NavLink>
         )
       })}
     </nav>

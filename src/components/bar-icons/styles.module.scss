@@ -1,0 +1,20 @@
+.wrapper {
+  align-items: center;
+  background-color: var(--color-bar-icons);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 120px;
+  justify-content: space-around;
+  padding: 0.5rem;
+  position: absolute;
+  right: 20px;
+  top: 45%;
+  z-index: 999;
+
+  & svg {
+    color: var(--color-primary);
+  }
+}

@@ -2,10 +2,5 @@
   display: flex;
   flex-direction: row;
   font-size: small;
-  gap: 15px;
-
-  & > a {
-    text-decoration: none;
-    color: var(--color-text-primary);
-  }
+  gap: 10px;
 }
